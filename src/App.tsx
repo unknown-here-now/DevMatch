@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom'; // Changed BrowserRouter to HashRouter
 import Navbar from './components/Navbar';
 import ExplorePage from './pages/ExplorePage';
 import ProfilePage from './pages/ProfilePage';
@@ -86,6 +86,7 @@ function AuthRedirect() {
 function App() {
   return (
     <UserProvider>
+      {/* Router here is now HashRouter */}
       <Router>
         <Routes>
           {/* Public routes */}
